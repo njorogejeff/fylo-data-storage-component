@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+    /* Primary Colors */
+    --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+    /* Neutral Colors */
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--pale-blue);
+    background: url("../images/bg-mobile.png") no-repeat left top;
+    background-size: 100vw 100vh;
+    max-width: 480px;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+img {
+    display: block;
+    object-fit: contain;
+}
+
+/* Fylo Data Storage Component Styles */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 1.2rem;
+}
+.fylo__section1,
+.fylo__section2 {
+    background-color: var(--dark-blue);
+    padding: 2.8rem 2.5rem;
+    border-radius: 12px;
+}
+.fylo__section1 {
+    border-top-right-radius: 100px; 
+}
+.fylo__logo {
+    margin-bottom: 2rem;
+}
+.fylo__icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.icon {
+    background-color: var(--very-dark-blue);
+    padding: .7rem;
+    border-radius: 10px;
+}
+.fylo__icon {
+    width: 25px;
+    height: 25px;
+}
