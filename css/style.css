@@ -117,7 +117,7 @@ img {
 }
 .progress__count p {
     font-weight: 700;
-    font-size: .9rem;
+    font-size: .8rem;
 }
 .fylo__notification {
     background-color: hsl(0, 0%, 100%);
@@ -143,4 +143,55 @@ img {
 .fylo__notification__text span {
     font-size: 2.5rem;
     color: var(--very-dark-blue);
+}
+
+/* Media Queries - Large Screen Sizes */
+@media screen and (min-width: 1024px) {
+    body {
+        max-width: 1440px;
+        width: 100%;
+        height: 100vh;
+        background: var(--very-dark-blue) url('../images/bg-desktop.png') no-repeat left bottom;
+        background-size: 100% 52vh;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1.5fr 2.5fr;
+        height: unset;
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        gap: 2rem;
+    }
+    .fylo__section1 {
+        padding: 2.5rem 9rem 2.5rem 2.5rem;
+    }
+    .fylo__section2 {
+        align-self: flex-end;
+        padding: 2.5rem;
+    }
+    .fylo__description {
+        text-align: left;
+    }
+    .fylo__notification {
+        width: unset;
+        top: 0;
+        right: 0;
+        left: unset;
+        transform: translate(0%, -65%);
+        margin-right: 2.5rem;
+        padding: .8rem 1.5rem;
+        border-bottom-right-radius: unset;
+    }
+    .fylo__notification::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        right: 0;
+        border-left: 35px solid transparent;
+        border-top: 33px solid hsl(0, 0%, 100%);
+    }
 }
